@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4.2.2
       - id: casile
         uses: sile-typesetter/casile@latest
         with:
           args: make -- pdfs epub renderings
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: ${{ steps.casile.outputs.DISTDIR }}
           path: ${{ steps.casile.outputs.DISTDIR }}
