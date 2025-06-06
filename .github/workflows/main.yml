@@ -9,7 +9,7 @@ jobs:
       - id: casile
         uses: sile-typesetter/casile@latest
         with:
-          args: make -- pdfs epub renderings
+          args: make -- pdfs renderings
       - name: Upload artifacts
         uses: actions/upload-artifact@v4.6.2
         with:
